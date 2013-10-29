@@ -15,7 +15,11 @@ Stop full body elastic scroll bounce when scrolling inside nested containers (IO
 Demos/Examples
 --------------
 
-[Demo (IOS only)](http://jaridmargolin.github.io/bouncefix.js/demos.html)
+**This is an IOS specific library. Demo using your IOS device.**
+
+[Demo - With Fix](http://jaridmargolin.github.io/bouncefix.js/demo-with.html)
+
+[Demo - Without Fix](http://jaridmargolin.github.io/bouncefix.js/demo-without.html)
 
 
 
