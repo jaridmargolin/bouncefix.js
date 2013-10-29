@@ -8,7 +8,7 @@ bouncefix.js [![Build Status](https://travis-ci.org/jaridmargolin/bouncefix.js.p
                                            |___/     
 
                                               
-Stop full page scroll bounce on ios.
+Stop full body elastic scroll bounce when scrolling inside nested containers (IOS)
 
 
 
@@ -22,7 +22,7 @@ Demos/Examples
 Why?
 ----
 
-IOS now offers native touch scrolling within nested containers via `-webkit-overflow-scrolling: touch;`, however, if scrolling occurs at an endpoint, the bounce occurs on the page rather than the nested container. `bouncefix.js` offers a viable solution to fix this issue.
+IOS (since IOS 5) offers native touch scrolling within nested containers via `-webkit-overflow-scrolling: touch;`, however, if scrolling occurs at one of the extremes, top or bottom, the elastic bounce occurs on the page rather than the nested container. `bouncefix.js` offers a viable solution to fix this issue.
 
 **note:** If there is no content to scroll, scrolling is blocked on the container. This may cause issues if attempting to implement a scroll to refresh feature.
 
@@ -35,21 +35,20 @@ Install
 
     bower install bouncefix.js
 
-**npm**
-
-    npm install bouncefix.js
-
 
 
 Usage
 -----
 
-Include on of the following:
+Include a reference to one of the following:
 
 * **uncompressed**: bouncefix.js
 * **compressed**: bouncefix.min.js
 
-### Methods
+Methods
+-------
+
+Methods should not be called until the DOM is ready.
 
 #### bouncefix.add(el)
 Apply fix so that the given element no longer causes a full body elastic bounce when scrolling at its extremes.
