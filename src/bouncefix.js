@@ -82,7 +82,7 @@ BounceFix.prototype._addObserver = function () {
     self._manageState(mutations);
   });
   // Begin observing
-  observer.observe(el, {
+  observer.observe(this.el, {
     childList: true,
     attributes:true,
     subtree: true
