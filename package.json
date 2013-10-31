@@ -1,6 +1,6 @@
 {
   "name": "bouncefix.js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Stop full page scroll bounce on ios",
   "author": "Jarid Margolin <jaridmargolin@gmail.com>",
   "repository" : {
