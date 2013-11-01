@@ -15,7 +15,9 @@ module.exports = function(grunt) {
           'src/tmpls/outro.js'
         ],
         // Bad line breaking before '?'.
-        '-W014': true
+        '-W014': true,
+        // is better written in dot notation.
+        '-W069': true
       }
     },
     concat: {
@@ -39,6 +41,8 @@ module.exports = function(grunt) {
         src: [
           'src/tmpls/intro.js',
           'src/bouncefix.js',
+          'src/fix.js',
+          'src/utils.js',
           'src/eventlistener.js',
           'src/tmpls/outro.js'
         ],

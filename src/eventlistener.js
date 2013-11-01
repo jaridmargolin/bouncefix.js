@@ -7,7 +7,10 @@
  */
 
 /* ExcludeStart */
+
+// Define module
 module.exports = EventListener;
+
 /* ExcludeEnd */
 
 //

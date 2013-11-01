@@ -7,16 +7,12 @@
  */ 
 
 // 3rd party
-var restore = require('sinon').restore,
-    mock    = require('sinon').mock,
-    stub    = require('sinon').stub;
-
 var should  = require('chai').should(),
     assert  = require('chai').assert;
 
 // first party
 var EventListener = require('../src/eventlistener'),
-    Element       = require('./fake-element/element.js');
+    Element       = require('./fake/element.js');
 
 
 //
