@@ -28,7 +28,7 @@ Why?
 
 IOS (since IOS 5) offers native touch scrolling within nested containers via `-webkit-overflow-scrolling: touch;`, however, if scrolling occurs at one of the extremes, top or bottom, the elastic bounce occurs on the page rather than the nested container. `bouncefix.js` offers a viable solution to fix this issue.
 
-**note:** If there is no content to scroll, scrolling is blocked on the container. This may cause issues if attempting to implement a scroll to refresh feature.
+**note:** If there is no content to scroll, scrolling is blocked on the container. This may cause issues if attempting to implement a scroll to refresh feature. This can be overcome creating a wrapper inside of your container and setting the height to 100% with a top and bottom padding of 1px (Not perfect, hackish, but it works)
 
 
 
@@ -54,24 +54,19 @@ Methods
 
 Methods should not be called until the DOM is ready.
 
-#### bouncefix.add(el)
+#### bouncefix.add(className)
 Apply fix so that the given element no longer causes a full body elastic bounce when scrolling at its extremes.
 
 **ex:**
 
-    var el = document.querySelector('.scrollable');
-    bouncefix.add(el);
+    bouncefix.add('srcollable-classname');
 
-#### bouncefix.remove(el)
+#### bouncefix.remove(className)
 Remove all listeners/observers respobile for fixing the full body elastic bounce.
 
 **ex:**
 
-    var el = document.querySelector('.scrollable');
-    bouncefix.add(el);
-    …
-    …
-    bouncefix.remove(el);
+    bouncefix.remove(srcollable-classname);
 
 
 

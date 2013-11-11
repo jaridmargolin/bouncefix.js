@@ -1,4 +1,3 @@
-// Expose to window
-if (typeof window !== 'undefined') { window.bouncefix = bouncefix; }
+return bouncefix;
 
-})(window, document);
+});
