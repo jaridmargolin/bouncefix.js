@@ -37,6 +37,7 @@ function EventListener(el, opts) {
 //
 EventListener.prototype.add = function () {
   this.el.addEventListener(this.evt, this.handler, false);
+  return this;
 };
 
 //
@@ -44,4 +45,5 @@ EventListener.prototype.add = function () {
 //
 EventListener.prototype.remove = function () {
   this.el.removeEventListener(this.evt, this.handler);
+  return this;
 };

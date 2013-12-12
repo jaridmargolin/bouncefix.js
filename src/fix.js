@@ -49,13 +49,17 @@ Fix.prototype.touchStart = function (evt) {
   this.target = utils.getTargetedEl(evt.target, this.className);
   if (this.target) {
     // If scrollable, adjust
-    if (utils.isScrollable(this.target)) { return utils.scrollToEnd(this.target); }
+    if (utils.isScrollable(this.target)) {
+      return utils.scrollToEnd(this.target);
+    }
     // Else block touchmove
-    this.endListener = new EventListener(this.target, {
-      evt: 'touchmove',
-      handler: this.touchMove,
-      context: this
-    }).add();
+    if (!this.moveListener) {
+      this.moveListener = new EventListener(this.target, {
+        evt: 'touchmove',
+        handler: this.touchMove,
+        context: this
+      }).add();
+    }
   }
 };
 
@@ -74,6 +78,7 @@ Fix.prototype.touchMove = function (evt) {
 Fix.prototype.touchEnd = function (evt) {
   if (this.moveListener) {
     this.moveListener.remove();
+    this.moveListener = null;
   }
 };
 
