@@ -1,6 +1,6 @@
 /*
  * fix.js
- * 
+ *
  * (C) 2013 Jarid Margolin
  * MIT LICENCE
  *
@@ -23,8 +23,15 @@ module.exports = Fix;
 // variables, and listeners.
 //
 function Fix(className) {
-  // If there is no element, then do nothing  
-  if(!className) { return false; }
+  if (!(this instanceof Fix)) {
+    return new Fix(className);
+  }
+
+  // Without className there is nothing to fix
+  if (!className) {
+    throw new Error("'className' argument is required");
+  }
+
   this.className = className;
 
   // The engine
@@ -68,7 +75,7 @@ Fix.prototype.touchStart = function (evt) {
 // by preventing default behavior.
 //
 Fix.prototype.touchMove = function (evt) {
-  evt.preventDefault(); 
+  evt.preventDefault();
 };
 
 //
