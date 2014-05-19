@@ -7,10 +7,8 @@
  */
 
 
-define([
-  'dom-event',
-  'utils'
-], function (DOMEvent, utils) {
+var DOMEvent = require('dom-event');
+var utils = require('utils');
 
 
 // ----------------------------------------------------------------------------
@@ -80,7 +78,6 @@ Fix.prototype.remove = function () {
 // Expose
 // ----------------------------------------------------------------------------
 
-return Fix;
+module.exports = Fix;
 
 
-});

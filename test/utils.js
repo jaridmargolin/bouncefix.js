@@ -1,47 +1,55 @@
 /*
  * test/bouncefix.js:
  *
- * (C) 2013 Jarid Margolin
+ * Copyright (c) 2014
  * MIT LICENCE
  *
- */ 
+ */
 
-// 3rd party
-var should  = require('chai').should(),
-    assert  = require('chai').assert;
+define([
+  'jquery',
+  'proclaim',
+  'sinon',
+  'utils'
+], function ($, assert, sinon, utils) {
 
-// first party
-var utils = require('../src/utils'),
-    Tree  = require('./fake/tree');
+
+// ----------------------------------------------------------------------------
+// Reusable
+// ----------------------------------------------------------------------------
+
+var $workboard = $('#workboard');
 
 
-//
-// bouncefix.js tests
-//
+// ----------------------------------------------------------------------------
+// Test
+// ----------------------------------------------------------------------------
+
 describe('utils.js', function () {
 
-  // Create DOM Tree
-  var tree = new Tree([
-    ['isParent'],
-    ['exists', 'isContent'],
-    ['isChild']
-  ]);
-
-  // Our element
-  var el = tree.elems[1];
-
   describe('getTargetedEl', function () {
+    
+    var start, target;
+
+    beforeEach(function () {
+      $workboard.html('<section class="exists"><div><p><span></span></p></div></section>');
+      start = $workboard.find('span')[0];
+    });
+
     it('Should return null if not found', function () {
-      var target = tree.elems[2];
-      assert.isNull(utils.getTargetedEl(target, 'doesntexist'));
+      assert.isNull(utils.getTargetedEl(start, 'doesntexist'));
     });
+
     it('Should return el if found', function () {
-      var target = tree.elems[2];
-      assert.isObject(utils.getTargetedEl(target, 'exists'));
+      assert.isObject(utils.getTargetedEl(start, 'exists'));
     });
+
   });
 
   describe('isScrollable', function () {
+
+    var el = {};
+
     it('Should return false if not scrollable', function () {
       el.scrollTop    = 0;
       el.offsetHeight = 500;
@@ -49,6 +57,7 @@ describe('utils.js', function () {
       // Check
       assert.isFalse(utils.isScrollable(el));
     });
+
     it('Should return true if scrollable', function () {
       el.scrollTop    = 0;
       el.offsetHeight = 500;
@@ -56,9 +65,13 @@ describe('utils.js', function () {
       // Check
       assert.isTrue(utils.isScrollable(el));
     });
+
   });
 
   describe('scrollToEnd', function () {
+
+    var el = {};
+    
     it('Should bump down 1px when scrolled at top', function () {
       el.scrollTop    = 0;
       el.offsetHeight = 500;
@@ -67,6 +80,7 @@ describe('utils.js', function () {
       utils.scrollToEnd(el);
       assert.equal(el.scrollTop, 1);
     });
+
     it('Should bump up 1px when scrolled at bottom', function () {
       el.scrollTop    = 500;
       el.offsetHeight = 500;
@@ -75,6 +89,10 @@ describe('utils.js', function () {
       utils.scrollToEnd(el);
       assert.equal(el.scrollTop, 499);
     });
+
   });
+
+});
+
 
 });

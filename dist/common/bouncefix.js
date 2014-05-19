@@ -7,9 +7,7 @@
  */
 
 
-define([
-  'fix'
-], function (Fix) {
+var Fix = require('fix');
 
 
 // ----------------------------------------------------------------------------
@@ -47,7 +45,6 @@ bouncefix.remove = function (className) {
 // Expose
 // ----------------------------------------------------------------------------
 
-return bouncefix;
+module.exports = bouncefix;
 
 
-});

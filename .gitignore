@@ -1,4 +1,5 @@
-.DS_STORE
+.DS_Store
+.grunt
 
 lib-cov
 *.seed
@@ -12,5 +13,9 @@ lib-cov
 pids
 logs
 results
-node_modules
+
 npm-debug.log
+node_modules
+bower_components
+tmp
+sauce-connect.log
