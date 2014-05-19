@@ -175,6 +175,14 @@ fix = function (DOMEvent, utils) {
   // variables, and listeners.
   // ----------------------------------------------------------------------------
   var Fix = function (className) {
+    // Make sure it is created correctly
+    if (!(this instanceof Fix)) {
+      return new Fix(className);
+    }
+    // Without className there is nothing to fix
+    if (!className) {
+      throw new Error('"className" argument is required');
+    }
     // Add className to instance
     this.className = className;
     // On touchstart check for block. On end, cleanup
