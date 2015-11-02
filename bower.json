@@ -1,6 +1,7 @@
 {
   "name": "bouncefix.js",
-  "version": "0.3.0",
+  "main": "./dist/bouncefix.js",
+  "version": "0.3.1",
   "devDependencies": {
     "requirejs": "~2.1.11",
     "easy-amdtest": "~0.0.1",
