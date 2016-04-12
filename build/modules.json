@@ -1,0 +1,4 @@
+{
+  "proclaim": "/node_modules/proclaim/lib/proclaim",
+  "sinon": "/node_modules/sinon/pkg/sinon"
+}
