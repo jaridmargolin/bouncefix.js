@@ -16,6 +16,9 @@
     "test": "grunt test"
   },
   "main": "dist/common/bouncefix.js",
+  "dependencies": {
+    "dom-event.js": "~0.1.0"
+  },
   "devDependencies": {
     "easy-build": "~0.3.0",
     "proclaim": "~3.4.0",

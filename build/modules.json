@@ -1,4 +1,5 @@
 {
+  "dom-event": "/node_modules/dom-event.js/dist/amd",
   "proclaim": "/node_modules/proclaim/lib/proclaim",
   "sinon": "/node_modules/sinon/pkg/sinon"
 }

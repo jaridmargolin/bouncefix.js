@@ -21,7 +21,10 @@ var bouncefix = require('bouncefix/bouncefix');
 describe('umd - bouncefix.js', function () {
 
   it('Should expose public methods.', function () {
-
+    assert.isFunction(bouncefix.initialize);
+    assert.isFunction(bouncefix.add);
+    assert.isFunction(bouncefix.remove);
+    assert.isFunction(bouncefix.teardown);
   });
 
 });
