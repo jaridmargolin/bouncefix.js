@@ -22,6 +22,9 @@
   "devDependencies": {
     "easy-build": "~0.3.0",
     "proclaim": "~3.4.0",
+    "q": "~1.4.1",
+    "sauce-connect-launcher": "~0.14.0",
+    "selenium-webdriver": "~2.53.1",
     "sinon": "~1.17.3"
   }
 }

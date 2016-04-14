@@ -4,3 +4,7 @@ node_js:
 before_script:
 - npm install -g grunt-cli
 - npm install --no-bin-links
+env:
+  global:
+  - secure: I3ZITSASNlL3ZVg4kQeALUXmJgxwBmu722ykiHOrPYz39iegCQeh++FY3kSpNJ+mUw9cxDw42kzpkJSZuUUykRP7x/hycwBFR3R1JW1SpbaDDLVnxegRs+dDBlEZ4cwkFoMzgKIGreMP99yZAvudAD6GorAaVFN/xJR/oGvC0eU=
+  - secure: hqF876USaqZLwBbPK7yfMgzAPXboeFGUBhao9UC8kA1ZxemfJ2kSVvTAaGIPsOUMudxEUP+9GTzBQvgLWvGJ5QH0cHKYktex6wRtpEIjOxZeRHeUDeyRAWiRuMQLzOCzriG4andGGfWjLog0FkHWMsaLBIzs1g8pMLeXyQSVi0Y=

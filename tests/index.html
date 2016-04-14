@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- meta -->
+    <meta charset="utf-8" />
+    <title>bouncefix.js - test</title>
+
+    <!-- enable responsive viewport -->
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta http-equiv="cache-control" content="no-cache" />
+  </head>
+
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+    .component {
+      position: absolute;
+      left: 0px;
+      right: 0px;
+    }
+    .header {
+      top: 0px;
+      height: 50px;
+      background: red;
+    }
+    .content {
+      top: 50px;
+      bottom: 0px;
+      background: blue;
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+  </style>
+  <body>
+
+    <div class="component header">
+    </div>
+    <div class="component content">
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+    </div>
+
+    <!-- env vars -->
+    <script src="/dist/bouncefix.js"></script>
+    <script>
+    bouncefix.initialize('.content');
+    </script>
+
+  </body>
+</html>
