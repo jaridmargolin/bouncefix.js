@@ -1,45 +1,16 @@
-bouncefix.js [![Build Status](https://travis-ci.org/jaridmargolin/bouncefix.js.png)](https://travis-ci.org/jaridmargolin/bouncefix.js)
+This repo includes a fix to the [bouncefix.js](https://github.com/jaridmargolin/bouncefix.js) library to make it work alongside [FastClick](https://github.com/ftlabs/fastclick)
+
 ============
-
-```
-   __                          ____          _   
-  / /  ___  __ _____  _______ / _(_)_ __    (_)__
- / _ \/ _ \/ // / _ \/ __/ -_) _/ /\ \ /   / (_-<
-/_.__/\___/\_,_/_//_/\__/\__/_//_//_\_(_)_/ /___/
-                                       |___/     
-```
-                                              
-Stop full body elastic scroll bounce when scrolling inside nested containers (IOS)
-
----
-
-## Demos/Examples
-
-**This is an IOS specific library. Demo using your IOS device.**
-
-[Demo - With Fix](http://jaridmargolin.github.io/bouncefix.js/demo-with.html)
-
-[Demo - Without Fix](http://jaridmargolin.github.io/bouncefix.js/demo-without.html)
-
----
-
-## Why?
-
-IOS (since IOS 5) offers native touch scrolling within nested containers via `-webkit-overflow-scrolling: touch;`, however, if scrolling occurs at one of the extremes, top or bottom, the elastic bounce occurs on the page rather than the nested container. `bouncefix.js` offers a viable solution to fix this issue.
-
-**note:** If there is no content to scroll, scrolling is blocked on the container. This may cause issues if attempting to implement a scroll to refresh feature. This can be overcome creating a wrapper inside of your container and setting the height to 100% with a top and bottom padding of 1px (Not perfect, hackish, but it works)
-
----
 
 ## Install
 
 
 ```
-npm install bouncefix.js
+npm install bouncefix-fastclick
 ```
 
 ```
-bower install bouncefix.js
+bower install bouncefix-fastclick
 ```
 
 ---
@@ -63,7 +34,7 @@ Apply fix on all elements matching the specified className.
 bouncefix.add('srcollable');
 ```
 
-   
+
 ### bouncefix.remove(className);
 
 Remove fix from all elements matching the specified className.
