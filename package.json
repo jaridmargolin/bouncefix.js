@@ -1,12 +1,15 @@
 {
-  "name": "bouncefix-fastclick",
-  "description": "Stop full page scroll bounce on ios. Now working alongside Fastclick",
-  "author": "Olle Svensson <olle@devolle.se>",
+  "name": "bouncefix.js",
+  "description": "Stop full page scroll bounce on ios.",
+  "author": "Jarid Margolin <jaridmargolin@gmail.com>",
   "version": "0.3.1",
-  "homepage": "https://github.com/Ollebolle/bouncefix.js",
+  "homepage": "https://github.com/jaridmargolin/bouncefix.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Ollebolle/bouncefix.js"
+    "url": "https://github.com/jaridmargolin/bouncefix.js"
+  },
+  "bugs": {
+    "url": "https://github.com/jaridmargolin/bouncefix.js/issues"
   },
   "scripts": {
     "test": "grunt test"
