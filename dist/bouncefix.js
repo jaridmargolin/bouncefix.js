@@ -103,7 +103,7 @@ domEvent = function () {
 }();
 /*
  * utils.js
- * 
+ *
  * (C) 2014 Jarid Margolin
  * MIT LICENCE
  *
@@ -146,11 +146,11 @@ utils = function () {
     var curPos = el.scrollTop, height = el.offsetHeight, scroll = el.scrollHeight;
     // If at top, bump down 1px
     if (curPos <= 0) {
-      el.scrollTop = 1;
+      el.fastClickLastScrollTop = el.scrollTop = 1;
     }
     // If at bottom, bump up 1px
     if (curPos + height >= scroll) {
-      el.scrollTop = scroll - height - 1;
+      el.fastClickLastScrollTop = el.scrollTop = scroll - height - 1;
     }
   };
   // ----------------------------------------------------------------------------

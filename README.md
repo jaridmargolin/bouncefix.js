@@ -2,13 +2,13 @@ bouncefix.js [![Build Status](https://travis-ci.org/jaridmargolin/bouncefix.js.p
 ============
 
 ```
-   __                          ____          _   
+   __                          ____          _
   / /  ___  __ _____  _______ / _(_)_ __    (_)__
  / _ \/ _ \/ // / _ \/ __/ -_) _/ /\ \ /   / (_-<
 /_.__/\___/\_,_/_//_/\__/\__/_//_//_\_(_)_/ /___/
-                                       |___/     
+                                       |___/
 ```
-                                              
+
 Stop full body elastic scroll bounce when scrolling inside nested containers (IOS)
 
 ---
@@ -63,7 +63,7 @@ Apply fix on all elements matching the specified className.
 bouncefix.add('srcollable');
 ```
 
-   
+
 ### bouncefix.remove(className);
 
 Remove fix from all elements matching the specified className.
